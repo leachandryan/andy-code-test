@@ -1,0 +1,13 @@
+{
+    "name": "baron_von_byte/andy-code-test",
+    "authors": [
+        {
+            "name": "Ryan Leach",
+            "email": "ryanleach@employthisguy.com"
+        }
+    ],
+    "require-dev": {
+        "phpstan/phpstan": "^1.10",
+        "phpunit/phpunit": "^9.5"
+    }
+}
