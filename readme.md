@@ -25,9 +25,9 @@ Basic Cart functionality, add and subtract products from cart.
 
 ```bash
 php -S localhost:3000 index.php
-
+```
 How to Run the Tests
 Navigate to the root directory of the application in the terminal.
 Run the following command to run the tests:
-
+```bash
 phpunit src/tests/ProductControllerTest.php
