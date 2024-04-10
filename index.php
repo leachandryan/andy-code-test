@@ -8,20 +8,22 @@
 <body>
     <h1>Welcome to Acme Widget Co</h1>
     <?php
-// index.php
+    // index.php
 
-// Include the ProductController class
-require_once 'src/controllers/ProductController.php';
+    // Include the ProductController class
+    require_once 'src/controllers/ProductController.php';
 
-// Create a new instance of the ProductController class
+   // Create a new instance of the ProductController class
 $productController = new Controllers\ProductController();
 
-// Call the list() method to get the product data
-$products = $productController->list();
-
-?>
-   
-    <?php include 'src/views/total_price.php';?>
-
+// Check if the form has been submitted
+if (isset($_POST['form_submitted'])) {
+    // Call the calculateTotal() method
+    $productController->calculateTotal();
+} else {
+    // Call the list() method to get the product data
+    $productController->list();
+}
+    ?>
 </body>
 </html>

@@ -7,7 +7,8 @@
 </head>
 <body>
     <h1>Product List</h1>
-    <form action="?route=basket/calculate" method="POST">
+    <form action="/index.php?route=calculateTotal" method="POST">
+    <input type="hidden" name="form_submitted" value="1">
         <table>
             <tr>
                 <th>Product Code</th>
