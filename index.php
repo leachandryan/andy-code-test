@@ -16,12 +16,15 @@
    // Create a new instance of the ProductController class
 $productController = new Controllers\ProductController();
 
-// Check if the form has been submitted
-if (isset($_POST['form_submitted'])) {
-    // Call the calculateTotal() method
-    $productController->calculateTotal();
+// Check if the form is submitted
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Call the calculateTotal method and get the result
+    $result = $productController->calculateTotal($_POST['quantity']);
+
+    // Load the total_price view with the result
+    $productController->loadView('total_price', $result);
 } else {
-    // Call the list() method to get the product data
+    // If the form is not submitted, show the product list
     $productController->list();
 }
     ?>
